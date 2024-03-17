@@ -1,0 +1,279 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    /* overflow: hidden;  To prevent horizontal scroll on smaller screens */
+    background-color: #000; /* Fallback background color */
+    position: relative; /* Make body position relative for absolute positioning */
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bg video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+    z-index: 1000; /* Ensures header stays on top of other content */
+}
+
+.logo img {
+    height: 300px; /* Adjust as needed */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00f; /* Change color on hover */
+}
+
+.intro {
+    position: relative; /* Make the intro section position relative */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align items to the bottom */
+    padding: 100px 20px;
+    margin-bottom: 100px;
+    height: 100vh; /* Set height to viewport height */
+}
+
+.profile-picture {
+    position: absolute;
+    bottom: 0;
+    left: -10px; /* Adjust margin as needed */
+}
+
+.profile-picture img {
+    width: 500px; /* Increase image width */
+margin-bottom: auto;
+    border: none; /* Remove border */
+}
+
+.personal-info {
+    position: absolute;
+    bottom: 300px;
+    right: 250px; /* Adjust margin as needed */
+    text-align: center;
+}
+
+.personal-info h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #00a;
+}
+
+
+
+
+.about {
+    background-color: white; /* Puting background para sa buong section */
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column; /* I-adjust ang direction ng flex container papunta sa column */
+    align-items: center; /* I-align ang mga elemento sa gitna ng column */
+    padding: 20px; /* Dagdag na padding para sa espasyo sa paligid */
+}
+
+.box {
+    width: 100%; /* Gawing 100% ang lapad para sakupin ang buong laki ng container */
+    padding: 20px; /* Dagdag na padding sa loob ng bawat box */
+    margin-bottom: 20px; /* Dagdag na margin sa pagitan ng mga box */
+    display: flex; /* I-set ang display property bilang flex para magamit ang flexbox */
+}
+
+.about-img,
+.my-goal-img {
+    flex: 1; /* Mag-expand ang about img at my goal img sa buong lapad ng box */
+    margin-right: 20px; /* Magdagdag ng space sa kanan para sa pagitan ng mga imahe */
+
+}
+
+
+.my-goal-content {
+    flex: 2; /* Mag-expand ang about content at my goal na word sa dalawang beses na lapad ng my goal img */
+    text-align: center; /* I-set ang text-align sa kanan para sa content */
+    max-width: 600px; /* I-set ang maximum width ng content */
+}
+
+.about-content {
+    flex: 2; /* Mag-expand ang about content at my goal na word sa dalawang beses na lapad ng my goal img */
+    text-align: center; /* I-set ang text-align sa kanan para sa content */
+    order: 2; /* Ilagay ang about content sa huli para ito ay nasa kanan */
+    background-color: rgba(255, 255, 255, 0.9); /* Puting background para sa bawat box */
+    border-radius: 10px; /* Radius ng border para sa rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect para sa depth */
+    max-width: 400px; /* I-set ang maximum width ng content */
+    margin-right: 200px;
+
+}
+
+.my-goal-content {
+    order: 4; /* Ilagay ang my goal content sa huli para ito ay nasa kanan */
+    padding-right: 200px;
+    padding-top: 60px;
+}
+
+.about-img img,
+.my-goal-img img {
+    max-width: 20%;
+    height: auto; /* Panatilihing proporsyonal ang taas */
+    margin-left: 200px;
+
+}
+
+
+
+
+
+.sp {
+    background-color: #3d3c3c; /* Gray background color para sa sp section */
+    display: flex; /* I-set ang display property bilang flex para magamit ang flexbox */
+}
+
+.sp-box-container1 {
+    flex: 1; /* Mag-expand ang sp-box-container1 upang sakupin ang buong lapad ng section */
+    padding: 20px; /* Dagdag na padding sa paligid */
+}
+
+.sp-box-container2 {
+    margin-top: 20px;
+    height: 30%;
+    width: 30%; /* I-set ang width ng sp-box-container2 */
+    padding: 20px; /* Dagdag na padding sa paligid */
+    background-color: rgb(82, 79, 79); /* Puting background para sa bawat box */
+    border-radius: 10px; /* Radius ng border para sa rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect para sa depth */
+    margin-left: 20px; /* Magdagdag ng space sa kaliwang gilid */
+    overflow: hidden; /* I-set ang overflow sa hidden upang maiwasan ang scroll bars */
+}
+
+.animate__fadeInLeft,
+.animate__fadeInRight {
+    animation-duration: 1s;
+    /* animation-fill-mode: forwards; */
+    opacity: 0;
+}
+
+
+.spbox {
+    margin-bottom: 20px; /* Dagdag na margin sa pagitan ng mga box */
+    padding: 20px; /* Dagdag na padding sa loob ng bawat box */
+    background-color: rgb(82, 79, 79); /* Puting background para sa bawat box */
+    border-radius: 10px; /* Radius ng border para sa rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect para sa depth */
+    display: flex; /* I-set ang display property bilang flex para magamit ang flexbox */
+    width: 85%;
+
+}
+
+.spbox:last-child {
+    margin-bottom: 0; /* Alisin ang margin sa huling child */
+}
+
+.sp-img1,
+.sp-img2 {
+    flex: 1; /* Mag-expand ang mga images sa buong lapad ng box */
+    margin-right: 20px; /* Magdagdag ng space sa kanan para sa pagitan ng mga images at descriptions */
+}
+
+.sp-img1 img,
+.sp-img2 img{
+    max-width: 30%;
+}
+
+.sp-desc1,
+.sp-desc2 {
+    flex: 2; /* Mag-expand ang mga descriptions sa dalawang beses na lapad ng mga images */
+    margin-right: 200px;
+    color: #fff;
+}
+
+.sp-desc1 h2,
+.sp-desc2 h2 {
+    margin-top: 0; /* Alisin ang default margin sa top */
+    color: #fff;
+}
+
+.sp-box-container2 > div {
+    padding: 10px 0; /* Dagdag na padding sa bawat div */
+    border-bottom: 1px solid #fff; /* Add border sa bawat div */
+}
+
+.sp-box-container2 > div:last-child {
+    border-bottom: none; /* Alisin ang border sa huling div */
+}
+
+.sp-box-container2 h1 {
+    color: #fff; /* Kulay puti ang font color */
+    margin-bottom: 10px; /* Alisin ang default margin */
+}
+
+.sp-box-container2 h3 {
+    color: #fff; /* Kulay puti ang font color */
+    display: inline-block; /* I-set ang display property sa inline-block upang magkatabi ang mga elements */
+    margin: 0 10px; /* Magdagdag ng margin sa kanan at kaliwa */
+    transition: color 0.3s; /* Add transition sa color */
+}
+
+.sp-box-container2 h3:hover {
+    color: rgb(7, 11, 228); /* Magpalit ng kulay tuwing na-hover */
+}
